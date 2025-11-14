@@ -140,14 +140,12 @@ export default function ExperienciasPage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#5c2a3a] via-[#8b3a5a] to-[#5c2a3a] backdrop-blur-sm border-b border-white/10 shadow-lg">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-              </div>
-              <span className="text-xl lg:text-2xl font-bold text-white">
-                Co'ox Travel
-              </span>
+            <Link href="/" className="flex items-center group">
+              <img 
+                src="/logo.png" 
+                alt="Co'ox Travel Logo" 
+                className="h-12 lg:h-14 w-auto group-hover:scale-105 transition-transform"
+              />
             </Link>
 
             {/* Navigation */}
@@ -164,12 +162,14 @@ export default function ExperienciasPage() {
               <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
                 <Link href="/reservaciones">Reservaciones</Link>
               </Button>
-              <Button variant="ghost" className="text-white/90 hover:text-white hover:bg-white/20 bg-white/10" asChild>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
                 <Link href="/experiencias">Experiencias</Link>
+              </Button>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/mapa">Mapa</Link>
               </Button>
             </nav>
 
-            {/* CTA Button */}
             <Button className="hidden md:flex bg-gradient-to-r from-[#f04883] to-[#e02057] hover:from-[#f56ba0] hover:to-[#f04883] text-white shadow-lg" asChild>
               <Link href="/chatbot">Planear Viaje con IA</Link>
             </Button>
@@ -357,13 +357,12 @@ export default function ExperienciasPage() {
       <footer className="py-12 lg:py-16 bg-[#2d5d68]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">
-                Co'ox Travel
-              </span>
+            <div className="flex items-center">
+              <img 
+                src="/logfoot.jpg" 
+                alt="Co'ox Travel Logo" 
+                className="h-20 w-auto"
+              />
             </div>
             
             <p className="text-sm text-white/80 text-center md:text-left">

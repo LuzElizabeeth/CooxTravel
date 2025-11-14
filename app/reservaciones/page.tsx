@@ -257,13 +257,12 @@ export default function ReservacionesPage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#5c2a3a] via-[#8b3a5a] to-[#5c2a3a] backdrop-blur-sm border-b border-white/10 shadow-lg">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-              </div>
-              <span className="text-xl lg:text-2xl font-bold text-white">
-                Co'ox Travel
-              </span>
+            <Link href="/" className="flex items-center group">
+              <img 
+                src="/logo.png" 
+                alt="Co'ox Travel Logo" 
+                className="h-12 lg:h-14 w-auto group-hover:scale-105 transition-transform"
+              />
             </Link>
 
             <nav className="hidden md:flex items-center gap-1 lg:gap-2">
@@ -304,41 +303,6 @@ export default function ReservacionesPage() {
             <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
               Reserva hoteles, vuelos, restaurantes y tours en todo México
             </p>
-          </div>
-
-          {/* Quick Navigation Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-            <Button
-              onClick={() => setActiveTab('hoteles')}
-              className="h-auto py-4 px-8 flex flex-col items-center gap-2 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-[#8b3a5a] transition-all hover:shadow-lg group"
-            >
-              <Hotel className="w-8 h-8 text-[#8b3a5a] group-hover:scale-110 transition-transform" />
-              <span className="font-semibold text-gray-700 group-hover:text-[#8b3a5a]">Hoteles</span>
-            </Button>
-            
-            <Button
-              onClick={() => setActiveTab('vuelos')}
-              className="h-auto py-4 px-8 flex flex-col items-center gap-2 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-[#1ba098] transition-all hover:shadow-lg group"
-            >
-              <Plane className="w-8 h-8 text-[#1ba098] group-hover:scale-110 transition-transform" />
-              <span className="font-semibold text-gray-700 group-hover:text-[#1ba098]">Vuelos</span>
-            </Button>
-            
-            <Button
-              onClick={() => setActiveTab('restaurantes')}
-              className="h-auto py-4 px-8 flex flex-col items-center gap-2 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-[#ff8d4d] transition-all hover:shadow-lg group"
-            >
-              <UtensilsCrossed className="w-8 h-8 text-[#ff8d4d] group-hover:scale-110 transition-transform" />
-              <span className="font-semibold text-gray-700 group-hover:text-[#ff8d4d]">Restaurantes</span>
-            </Button>
-            
-            <Button
-              onClick={() => setActiveTab('tours')}
-              className="h-auto py-4 px-8 flex flex-col items-center gap-2 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-[#f04883] transition-all hover:shadow-lg group"
-            >
-              <MapPinned className="w-8 h-8 text-[#f04883] group-hover:scale-110 transition-transform" />
-              <span className="font-semibold text-gray-700 group-hover:text-[#f04883]">Tours</span>
-            </Button>
           </div>
 
           {/* Tabs */}
@@ -454,11 +418,12 @@ export default function ReservacionesPage() {
       <footer className="py-12 bg-[#2d5d68]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Co'ox Travel</span>
+            <div className="flex items-center">
+              <img 
+                src="/logfoot.jpg" 
+                alt="Co'ox Travel Logo" 
+                className="h-20 w-auto"
+              />
             </div>
             
             <p className="text-sm text-white/80">
