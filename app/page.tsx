@@ -117,6 +117,9 @@ export default function HomePage() {
               <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
                 <Link href="/experiencias">Experiencias</Link>
               </Button>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/mapa">Mapa</Link>
+              </Button>
             </nav>
 
             {/* CTA Button - Updated to link to chatbot */}
