@@ -96,7 +96,7 @@ export default function HomePage() {
                 <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
               </div>
               <span className="text-xl lg:text-2xl font-bold text-white">
-                Co'ox Travel
+                Có'ox Travel
               </span>
             </Link>
 
@@ -119,9 +119,9 @@ export default function HomePage() {
               </Button>
             </nav>
 
-            {/* CTA Button */}
-            <Button className="hidden md:flex bg-gradient-to-r from-[#f04883] to-[#e02057] hover:from-[#f56ba0] hover:to-[#f04883] text-white shadow-lg">
-              Reserva Ahora
+            {/* CTA Button - Updated to link to chatbot */}
+            <Button className="hidden md:flex bg-gradient-to-r from-[#f04883] to-[#e02057] hover:from-[#f56ba0] hover:to-[#f04883] text-white shadow-lg" asChild>
+              <Link href="/chatbot">Planear Viaje con IA</Link>
             </Button>
           </div>
         </div>
@@ -136,13 +136,13 @@ export default function HomePage() {
         
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 lg:space-y-8">
-            <div className="">
-              
-        
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#ff8d4d] to-[#f04883] text-white text-sm font-medium shadow-lg mb-4">
+              <Bot className="w-4 h-4" />
+              <span>Impulsado por IA</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-balance leading-[1.1] tracking-tight">
-              <span className="bg-gradient-to-r from-[#5c2a3a] via-[#8b3a5a] to-[#d41f4f] bg-clip-text text-transparent">Co'ox</span>{" "}
+              <span className="bg-gradient-to-r from-[#5c2a3a] via-[#8b3a5a] to-[#d41f4f] bg-clip-text text-transparent">Có'ox</span>{" "}
               <span className="bg-gradient-to-r from-[#1ba098] to-[#2d5d68] bg-clip-text text-transparent">Travel</span>
             </h1>
             
@@ -155,9 +155,11 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-[#ff8d4d] to-[#ff6b35] hover:from-[#ffaa70] hover:to-[#ff8d4d] text-white text-base lg:text-lg px-8 h-12 lg:h-14 shadow-lg">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Habla con el Asistente IA
+              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-[#ff8d4d] to-[#ff6b35] hover:from-[#ffaa70] hover:to-[#ff8d4d] text-white text-base lg:text-lg px-8 h-12 lg:h-14 shadow-lg" asChild>
+                <Link href="/chatbot">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Habla con el Asistente IA
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto text-base lg:text-lg px-8 h-12 lg:h-14 border-2 border-[#1ba098] text-[#1ba098] hover:bg-[#1ba098] hover:text-white transition-all">
                 Ver Promociones
@@ -214,8 +216,8 @@ export default function HomePage() {
 
       <section className="py-16 lg:py-24 bg-gradient-to-br from-[#1ba098] to-[#2d5d68] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-20 w-64 h-64 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-20 w-80 h-80 bg-[#ff8d4d] rounded-full blur-3xl" />
+          <div className="absolute top-10 left-20 w-64 h-64 bg-[#f04883] rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-20 w-80 h-80 bg-[#1ba098] rounded-full blur-3xl" />
         </div>
         
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -255,9 +257,11 @@ export default function HomePage() {
                 })}
               </div>
 
-              <Button size="lg" className="bg-gradient-to-r from-[#ff8d4d] to-[#f04883] hover:from-[#ffaa70] hover:to-[#ff6ba0] text-white text-base lg:text-lg px-8 h-12 lg:h-14 shadow-xl mt-6">
-                <Bot className="mr-2 h-5 w-5" />
-                Probar el Asistente IA
+              <Button size="lg" className="bg-gradient-to-r from-[#ff8d4d] to-[#f04883] hover:from-[#ffaa70] hover:to-[#ff6ba0] text-white text-base lg:text-lg px-8 h-12 lg:h-14 shadow-xl mt-6" asChild>
+                <Link href="/chatbot">
+                  <Bot className="mr-2 h-5 w-5" />
+                  Probar el Asistente IA
+                </Link>
               </Button>
             </div>
 
@@ -379,9 +383,11 @@ export default function HomePage() {
             <p className="text-lg lg:text-xl text-white/90 leading-relaxed">
               Deja que nuestro asistente IA cree el itinerario perfecto para ti. Hoteles, vuelos, restaurantes y tours, todo coordinado en un solo plan personalizado.
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-[#ff8d4d] to-[#ff6b35] hover:from-[#ffaa70] hover:to-[#ff8d4d] text-white text-base lg:text-lg px-8 h-12 lg:h-14 shadow-xl">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Comenzar Ahora
+            <Button size="lg" className="bg-gradient-to-r from-[#ff8d4d] to-[#ff6b35] hover:from-[#ffaa70] hover:to-[#ff8d4d] text-white text-base lg:text-lg px-8 h-12 lg:h-14 shadow-xl" asChild>
+              <Link href="/chatbot">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Comenzar Ahora
+              </Link>
             </Button>
           </div>
         </div>
@@ -396,12 +402,12 @@ export default function HomePage() {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white">
-                Co'ox Travel
+                Có'ox Travel
               </span>
             </div>
             
             <p className="text-sm text-white/80 text-center md:text-left">
-              © 2025 Co'ox Travel. Todos los derechos reservados.
+              © 2025 Có'ox Travel. Todos los derechos reservados.
             </p>
             
             <div className="flex gap-4">

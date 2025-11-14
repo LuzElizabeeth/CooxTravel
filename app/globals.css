@@ -6,7 +6,7 @@
 :root {
   /* Warm beige/cream tones for travel feel */
   --background: oklch(0.98 0.005 330);
-  --foreground: oklch(0.15 0.02 330);
+  --foreground: okdlch(0.15 0.02 330);
   
   /* Turquoise/teal primary inspired by the original */
   --primary: oklch(0.35 0.08 340);
