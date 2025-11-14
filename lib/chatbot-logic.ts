@@ -66,9 +66,10 @@ export interface Itinerary {
 }
 
 export function generateItinerary(data: TravelData): Itinerary {
-  // Generate hotel based on budget
   const budgetPerDay = data.budget / data.days
-  const hotelPricePerNight = Math.floor(budgetPerDay * 0.35) // 35% of daily budget for hotel
+  
+  // Distribute budget more carefully: 30% hotel, 40% flights, 15% food, 15% tours
+  const hotelPricePerNight = Math.floor(budgetPerDay * 0.30) // 30% of daily budget for hotel
   
   const hotel: Hotel = {
     name: `Hotel ${data.destination} ${budgetPerDay > 2000 ? 'Boutique' : 'Central'}`,
@@ -81,8 +82,8 @@ export function generateItinerary(data: TravelData): Itinerary {
     total: hotelPricePerNight * data.days
   }
 
-  // Generate flights
-  const flightPricePerPerson = Math.floor(budgetPerDay * 2.5) // Aprox 2.5 days of budget
+  const totalFlightBudget = Math.floor(data.budget * 0.40)
+  const flightPricePerPerson = Math.floor(totalFlightBudget / (data.guests * 2)) // divided by 2 for round trip
   const flights: Flights = {
     outbound: {
       airline: 'Aeroméxico',
@@ -106,33 +107,32 @@ export function generateItinerary(data: TravelData): Itinerary {
     total: flightPricePerPerson * 2 * data.guests
   }
 
-  // Generate restaurants
-  const restaurantBudgetPerDay = Math.floor(budgetPerDay * 0.25) // 25% for food
+  const totalRestaurantBudget = Math.floor(data.budget * 0.15)
+  const restaurantBudgetPerDay = Math.floor(totalRestaurantBudget / data.days)
   const restaurants: Restaurant[] = [
     {
       name: `La Tradición de ${data.destination}`,
       cuisine: 'Cocina Local',
       description: 'Auténtica comida regional en ambiente tradicional',
-      avgPrice: Math.floor(restaurantBudgetPerDay * 0.8)
+      avgPrice: Math.floor(restaurantBudgetPerDay * 0.3)
     },
     {
       name: 'El Sabor del Mar',
       cuisine: 'Mariscos y Pescados',
       description: 'Mariscos frescos con vista panorámica',
-      avgPrice: Math.floor(restaurantBudgetPerDay * 1.2)
+      avgPrice: Math.floor(restaurantBudgetPerDay * 0.35)
     },
     {
       name: 'Fusión Moderna',
       cuisine: 'Fusión Contemporánea',
       description: 'Experiencia gastronómica de alto nivel',
-      avgPrice: Math.floor(restaurantBudgetPerDay * 1.5)
+      avgPrice: Math.floor(restaurantBudgetPerDay * 0.35)
     }
   ]
 
-  const restaurantsTotal = Math.floor(restaurantBudgetPerDay * data.days * data.guests)
+  const restaurantsTotal = totalRestaurantBudget
 
-  // Generate tours based on interests
-  const tourBudgetPerDay = Math.floor(budgetPerDay * 0.3) // 30% for activities
+  const totalToursBudget = Math.floor(data.budget * 0.15)
   const tours: Tour[] = []
   
   if (data.interests.some(i => i.toLowerCase().includes('cultura') || i.toLowerCase().includes('historia'))) {
@@ -141,7 +141,7 @@ export function generateItinerary(data: TravelData): Itinerary {
       duration: 'Día completo (8 horas)',
       description: 'Visita guiada a los sitios históricos más emblemáticos',
       includes: ['Guía certificado', 'Transporte', 'Entradas', 'Comida'],
-      price: Math.floor(tourBudgetPerDay * 1.2)
+      price: Math.floor(totalToursBudget * 0.45 / data.guests)
     })
   }
 
@@ -151,7 +151,7 @@ export function generateItinerary(data: TravelData): Itinerary {
       duration: 'Medio día (4 horas)',
       description: 'Actividades de aventura en entorno natural',
       includes: ['Equipo incluido', 'Instructor', 'Seguro', 'Refrigerios'],
-      price: Math.floor(tourBudgetPerDay * 0.9)
+      price: Math.floor(totalToursBudget * 0.30 / data.guests)
     })
   }
 
@@ -161,7 +161,7 @@ export function generateItinerary(data: TravelData): Itinerary {
       duration: '4 horas',
       description: 'Degustación de platillos locales y visita a mercados',
       includes: ['Guía', 'Degustaciones', 'Bebidas', 'Recetario'],
-      price: Math.floor(tourBudgetPerDay * 0.7)
+      price: Math.floor(totalToursBudget * 0.25 / data.guests)
     })
   }
 
@@ -172,7 +172,7 @@ export function generateItinerary(data: TravelData): Itinerary {
       duration: '5 horas',
       description: 'Recorrido por los puntos más importantes de la ciudad',
       includes: ['Transporte', 'Guía', 'Entradas', 'Agua embotellada'],
-      price: Math.floor(tourBudgetPerDay * 0.8)
+      price: Math.floor(totalToursBudget * 0.40 / data.guests)
     })
   }
 
