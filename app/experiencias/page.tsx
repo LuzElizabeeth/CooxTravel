@@ -49,7 +49,7 @@ export default function ExperienciasPage() {
       date: "10 de Enero, 2025",
       likes: 89,
       comments: 12,
-      comment: "Increíble experiencia culinaria. Los moles tradicionales fueron espectaculares y el tour por el mercado de Benito Juárez fue muy educativo. El chef nos explicó cada ingrediente y la historia detrás de cada platillo. Totalmente recomendado para los amantes de la gastronomía mexicana."
+      comment: "Increíble experiencia culinaria. Los moles tradicionales fueron espectaculares y el tour por el mercado de Benito Juárez fue muy educativo. El chef nos expliCo cada ingrediente y la historia detrás de cada platillo. Totalmente recomendado para los amantes de la gastronomía mexicana."
     },
     {
       id: 3,
@@ -124,7 +124,7 @@ export default function ExperienciasPage() {
       date: "15 de Diciembre, 2024",
       likes: 324,
       comments: 27,
-      comment: "Ver el amanecer desde un globo aerostático sobre las pirámides de Teotihuacán fue una experiencia inolvidable. El piloto fue muy profesional y nos explicó la historia del lugar desde el aire. El desayuno después del vuelo fue el cierre perfecto."
+      comment: "Ver el amanecer desde un globo aerostático sobre las pirámides de Teotihuacán fue una experiencia inolvidable. El piloto fue muy profesional y nos expliCo la historia del lugar desde el aire. El desayuno después del vuelo fue el cierre perfecto."
     }
   ]
 
@@ -146,7 +146,7 @@ export default function ExperienciasPage() {
                 <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
               </div>
               <span className="text-xl lg:text-2xl font-bold text-white">
-                Có'ox Travel
+                Co'ox Travel
               </span>
             </Link>
 
@@ -362,12 +362,12 @@ export default function ExperienciasPage() {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white">
-                Có'ox Travel
+                Co'ox Travel
               </span>
             </div>
             
             <p className="text-sm text-white/80 text-center md:text-left">
-              © 2025 Có'ox Travel. Todos los derechos reservados.
+              © 2025 Co'ox Travel. Todos los derechos reservados.
             </p>
             
             <div className="flex gap-4">

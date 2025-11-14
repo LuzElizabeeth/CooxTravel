@@ -91,13 +91,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-              </div>
-              <span className="text-xl lg:text-2xl font-bold text-white">
-                Có'ox Travel
-              </span>
+            <Link href="/" className="flex items-center group">
+              <img 
+                src="logo.png" 
+                alt="Co'ox Travel Logo" 
+                className="h-12 lg:h-14 w-auto group-hover:scale-105 transition-transform"
+              />
             </Link>
 
             {/* Navigation */}
@@ -139,13 +138,12 @@ export default function HomePage() {
         
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 lg:space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#ff8d4d] to-[#f04883] text-white text-sm font-medium shadow-lg mb-4">
-              <Bot className="w-4 h-4" />
-              <span>Impulsado por IA</span>
+            <div className="">
+              <span></span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-balance leading-[1.1] tracking-tight">
-              <span className="bg-gradient-to-r from-[#5c2a3a] via-[#8b3a5a] to-[#d41f4f] bg-clip-text text-transparent">Có'ox</span>{" "}
+              <span className="bg-gradient-to-r from-[#5c2a3a] via-[#8b3a5a] to-[#d41f4f] bg-clip-text text-transparent">Co'ox</span>{" "}
               <span className="bg-gradient-to-r from-[#1ba098] to-[#2d5d68] bg-clip-text text-transparent">Travel</span>
             </h1>
             
@@ -400,17 +398,17 @@ export default function HomePage() {
       <footer className="py-12 lg:py-16 bg-[#2d5d68]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">
-                Có'ox Travel
-              </span>
+            {/* Logo */}
+            <div className="flex items-center">
+              <img 
+                src="logfoot.jpg" 
+                alt="Co'ox Travel Logo" 
+                className="h-20 w-auto"
+              />
             </div>
             
             <p className="text-sm text-white/80 text-center md:text-left">
-              © 2025 Có'ox Travel. Todos los derechos reservados.
+              © 2025 Co'ox Travel. Todos los derechos reservados.
             </p>
             
             <div className="flex gap-4">

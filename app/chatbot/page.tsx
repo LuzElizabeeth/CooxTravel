@@ -13,7 +13,7 @@ export default function ChatbotPage() {
     {
       id: '1',
       role: 'assistant',
-      content: '¡Hola! Soy tu asistente de viajes de Có\'ox Travel. Estoy aquí para ayudarte a planear el viaje perfecto. ¿A dónde te gustaría viajar?',
+      content: '¡Hola! Soy tu asistente de viajes de Co\'ox Travel. Estoy aquí para ayudarte a planear el viaje perfecto. ¿A dónde te gustaría viajar?',
       timestamp: new Date()
     }
   ])

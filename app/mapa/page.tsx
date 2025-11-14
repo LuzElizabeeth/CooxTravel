@@ -146,7 +146,7 @@ export default function MapaPage() {
                 <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
               </div>
               <span className="text-xl lg:text-2xl font-bold text-white">
-                Có'ox Travel
+                Co'ox Travel
               </span>
             </Link>
 
@@ -224,7 +224,7 @@ export default function MapaPage() {
                     height="600"
                     className="w-full h-full border-0"
                     loading="lazy"
-                    title="Mapa de Destinos Có'ox Travel"
+                    title="Mapa de Destinos Co'ox Travel"
                   />
                   
                   {/* Results Counter - positioned over the map */}

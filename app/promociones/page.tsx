@@ -262,7 +262,7 @@ export default function PromocionesPage() {
                 <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
               </div>
               <span className="text-xl lg:text-2xl font-bold text-white">
-                Có'ox Travel
+                Co'ox Travel
               </span>
             </Link>
 
@@ -458,11 +458,11 @@ export default function PromocionesPage() {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Có'ox Travel</span>
+              <span className="text-xl font-bold text-white">Co'ox Travel</span>
             </div>
             
             <p className="text-sm text-white/80">
-              © 2025 Có'ox Travel. Todos los derechos reservados.
+              © 2025 Co'ox Travel. Todos los derechos reservados.
             </p>
             
             <div className="flex gap-4">
