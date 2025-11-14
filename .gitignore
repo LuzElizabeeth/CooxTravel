@@ -1,0 +1,11 @@
+# Next.js build
+.next/
+
+# Dependencias
+node_modules/
+
+# Archivos de logs
+*.log
+
+# Configuración del sistema
+.DS_Store
