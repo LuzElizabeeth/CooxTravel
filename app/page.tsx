@@ -162,9 +162,11 @@ export default function HomePage() {
                   Habla con el Asistente IA
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base lg:text-lg px-8 h-12 lg:h-14 border-2 border-[#1ba098] text-[#1ba098] hover:bg-[#1ba098] hover:text-white transition-all">
-                Ver Promociones
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base lg:text-lg px-8 h-12 lg:h-14 border-2 border-[#1ba098] text-[#1ba098] hover:bg-[#1ba098] hover:text-white transition-all" asChild>
+                <Link href="/promociones">
+                  Ver Promociones
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -203,9 +205,11 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <Button variant="ghost" className="w-full justify-between text-[#1ba098] hover:text-[#1ba098] hover:bg-[#1ba098]/5 group/btn">
-                      Explorar
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <Button variant="ghost" className="w-full justify-between text-[#1ba098] hover:text-[#1ba098] hover:bg-[#1ba098]/5 group/btn" asChild>
+                      <Link href="/reservaciones">
+                        Explorar
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Link>
                     </Button>
                   </div>
                 </Card>
@@ -357,9 +361,11 @@ export default function HomePage() {
                   </div>
 
                   <div className="p-6 bg-white">
-                    <Button className="w-full bg-gradient-to-r from-[#8b3a5a] to-[#d41f4f] hover:from-[#a0496e] hover:to-[#f04883] text-white group-hover:shadow-lg transition-all">
-                      Ver Paquetes
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <Button className="w-full bg-gradient-to-r from-[#8b3a5a] to-[#d41f4f] hover:from-[#a0496e] hover:to-[#f04883] text-white group-hover:shadow-lg transition-all" asChild>
+                      <Link href="/promociones">
+                        Ver Paquetes
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
                     </Button>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { MapPin, ArrowLeft, Filter, Search, X } from 'lucide-react'
+import { MapPin, Filter, Search, X } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 
 export default function MapaPage() {
@@ -137,24 +137,43 @@ export default function MapaPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#fef9f8] via-[#fef5f7] to-[#f9feff]">
-      {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#5c2a3a] via-[#8b3a5a] to-[#5c2a3a] backdrop-blur-sm border-b border-white/10 shadow-lg">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-[#1ba098] to-[#2d5d68] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-              </div>
-              <span className="text-xl lg:text-2xl font-bold text-white">
-                Co'ox Travel
-              </span>
+            {/* Logo */}
+            <Link href="/" className="flex items-center group">
+              <img 
+                src="/logo.png" 
+                alt="Co'ox Travel Logo" 
+                className="h-12 lg:h-14 w-auto group-hover:scale-105 transition-transform"
+              />
             </Link>
 
-            <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
-              <Link href="/">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Volver al Inicio
-              </Link>
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/">Inicio</Link>
+              </Button>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/promociones">Promociones</Link>
+              </Button>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/eventos">Eventos</Link>
+              </Button>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/reservaciones">Reservaciones</Link>
+              </Button>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/experiencias">Experiencias</Link>
+              </Button>
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10" asChild>
+                <Link href="/mapa">Mapa</Link>
+              </Button>
+            </nav>
+
+            {/* CTA Button */}
+            <Button className="hidden md:flex bg-gradient-to-r from-[#f04883] to-[#e02057] hover:from-[#f56ba0] hover:to-[#f04883] text-white shadow-lg" asChild>
+              <Link href="/chatbot">Planear Viaje con IA</Link>
             </Button>
           </div>
         </div>
@@ -294,6 +313,37 @@ export default function MapaPage() {
           </div>
         </div>
       </div>
+
+      <footer className="py-12 lg:py-16 bg-[#2d5d68]">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Logo */}
+            <div className="flex items-center">
+              <img 
+                src="/logfoot.jpg" 
+                alt="Co'ox Travel Logo" 
+                className="h-20 w-auto"
+              />
+            </div>
+            
+            <p className="text-sm text-white/80 text-center md:text-left">
+              © 2025 Co'ox Travel. Todos los derechos reservados.
+            </p>
+            
+            <div className="flex gap-4">
+              <Link href="/privacidad" className="text-sm text-white/80 hover:text-white transition-colors">
+                Privacidad
+              </Link>
+              <Link href="/terminos" className="text-sm text-white/80 hover:text-white transition-colors">
+                Términos
+              </Link>
+              <Link href="/contacto" className="text-sm text-white/80 hover:text-white transition-colors">
+                Contacto
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       <style jsx>{`
         .custom-scrollbar::-webkit-scrollbar {
