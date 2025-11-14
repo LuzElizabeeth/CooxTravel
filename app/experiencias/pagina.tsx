@@ -299,12 +299,12 @@ export default function ExperienciasPage() {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white">
-                Có'ox Travel
+                Co'ox Travel
               </span>
             </div>
             
             <p className="text-sm text-white/80 text-center md:text-left">
-              © 2025 Có'ox Travel. Todos los derechos reservados.
+              © 2025 Co'ox Travel. Todos los derechos reservados.
             </p>
             
             <div className="flex gap-4">
